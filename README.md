@@ -23,4 +23,3 @@ Things you may want to cover:
 
 * ...
 
-This is an edit
