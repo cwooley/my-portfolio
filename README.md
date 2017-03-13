@@ -1,10 +1,10 @@
 # README
 
 
-  ## Charles Wooley Portfolio
+## Charles Wooley Portfolio
   
-  ### Features
-  -Real time chat engine for comments
-  -Blog
-  -portfolio
-  -drag and drop interface
+### Features
+-Real time chat engine for comments
+-Blog
+-portfolio
+-drag and drop interface
