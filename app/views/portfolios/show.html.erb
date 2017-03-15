@@ -1,15 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @portfolio.title %>
-</p>
+<%= image_tag @portfolio.main_image %>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @portfolio.subtitle %>
-</p>
+<h1><%= @portfolio.title %></h1>
 
-  <strong>Body:</strong>
-  <%= @portfolio.body %>
-</p>
+<em><%= @portfolio.subtitle %></em> 
+
+<p><%= @portfolio.body %></p>
