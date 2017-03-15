@@ -37,6 +37,13 @@ class PortfoliosController < ApplicationController
     end
   end
   
+  def destroy
+    @portfolio.destroy
+    respond_to do |format|
+      format.html {redirect_to portfolios_url, notice: 'portfolio has been deleted.' }
+    end
+  end
+  
   def show
   
   end
