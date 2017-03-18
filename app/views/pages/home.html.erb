@@ -1,10 +1,10 @@
-<h1>Hafa adai, <%= current_user.first_name if current_user %></h1>
+<h1>Hafa adai, <%= current_user.first_name %></h1>
 <h3>Skills</h3>
 <% @skills.each do |skill| %>
-<p> <%= skill.title %> </p>
+  <p> <%= skill.title %> </p>
 <% end %>
 <h3>Blogs</h3>
 <% @posts.each do |post| %>
-<p> <%= post.title %> </p>
+  <p> <%= post.title %> </p>
 <% end %>
 
