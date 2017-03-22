@@ -18,4 +18,8 @@ module ApplicationHelper
                   )
     end
   end
+  
+  def copyright_generator()
+    MammothViewTool::Renderer.copyright 'Charles Wooley', 'All Rights Reserved'
+  end
 end
