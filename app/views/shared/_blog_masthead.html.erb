@@ -1,0 +1,9 @@
+<!-- start of blog header -->
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">My blog</h1>
+    <p class="lead blog-description">A collection of my thoughts on a collection of things.</p>
+    <%= link_to 'New Blog', new_blog_path, class: "btn btn-primary" if logged_in?(:site_admin)  %>
+  </div>
+</div>
+<!-- end of blog header -->

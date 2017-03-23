@@ -4,10 +4,12 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "font-awesome";
 
 /*
  * Globals
  */
+
 
 @media (min-width: 48em) {
   html {
@@ -170,4 +172,12 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/*
+ * Custom styles
+ */
+ 
+.social-links li {
+  font-size: 3em;
 }
