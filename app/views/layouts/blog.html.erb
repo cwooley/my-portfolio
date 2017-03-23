@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content=<%= @seo_keywords %> />
-    
     <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -18,8 +17,9 @@
     <!-- start of blog header -->
     <div class="blog-header">
       <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <h1 class="blog-title">My blog</h1>
         <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <%= link_to 'New Blog', new_blog_path, class: "btn btn-primary" if logged_in?(:site_admin)  %>
       </div>
     </div>
     <!-- end of blog header -->
@@ -60,13 +60,12 @@
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
-    <%= render "shared/nav", location: 'bottom' %>
     
     <%= login_helper %>
     
     <%= source_helper("blog") %>
-      </div>
-    </div>
+      </div> <!-- end row -->
+    </div>  <!-- end container -->
       <footer class="blog-footer">
         <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         <p>
