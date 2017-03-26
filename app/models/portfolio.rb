@@ -15,6 +15,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: language)
   end
   
+  def self.by_position
+    order("position ASC")
+  end
+  
   after_initialize :set_defaults
   
   def set_defaults
