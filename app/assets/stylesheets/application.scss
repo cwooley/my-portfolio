@@ -29,7 +29,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-image: asset-url("escheresque_ste2x.png");
 }
 body {
   color: #fff;
@@ -190,4 +190,26 @@ body {
 .app-nav span {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#background {
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("swirl_pattern.png");
+  background-size: cover;
+}
+
+#bigbackground {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('swirl_pattern.png');
+  background-size: cover;
 }
