@@ -5,4 +5,12 @@
   <p> <%= @blog.body %> </p>
   
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  
+  <%= render 'comments/comment_form' %>
+  
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>    
+  </div>
+
+
 </div>
