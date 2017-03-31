@@ -6,7 +6,8 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content=<%= @seo_keywords %> />
-    
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Rosario" rel="stylesheet">
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,8 +20,6 @@
     <%= yield %>
     
     <%= render 'shared/portfolio_footer' %>
-    
-    <%= source_helper("portfolio") %>
     
     <%= alerts %>
   </body>

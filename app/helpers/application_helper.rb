@@ -1,4 +1,22 @@
 module ApplicationHelper
+  class CodeRayify < Redcarpet::Render::HTML
+    def block_code(code, language)
+      CodeRay.scan(code, language).div if language
+    end
+  end
+  
+  def markdown(text)
+    coderayified = CodeRayify.new(:filter_html => true, 
+                                  :hard_wrap => true)
+    options = {
+      :fenced_code_blocks => true,
+      :no_intra_emphasis => true,
+      :autolink => true,
+      :lax_html_blocks => true,
+    }
+    markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
+    markdown_to_html.render(text).html_safe
+  end
   
   def login_helper(style = '')
     if current_user.is_a?(GuestUser)
@@ -9,13 +27,10 @@ module ApplicationHelper
     end 
   end
   
-  def source_helper(layout_name)
+  def source_helper(styles)
     if session[:source]
-      greeting = "Thanks for visiting me from #{session[:source]}"
-      content_tag(:p,
-                  greeting,
-                  class: "source-greeting"
-                  )
+      greeting = "Thanks for visiting me from #{session[:source]}, please feel free to #{ link_to 'contact me', contact_path}, if you would like to work together."
+      content_tag(:div, greeting.html_safe, class: styles )
     end
   end
   

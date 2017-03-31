@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Raleway', sans-serif;
   color: #555;
 }
 
@@ -29,8 +29,8 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: 'Rosario', sans-serif;
+  font-weight: bold;
   color: #333;
 }
 
@@ -202,4 +202,21 @@ h6, .h6 {
 
 .comment-body {
   word-wrap: break-word;
+}
+
+.topic-btns {
+  padding-top: 10px;
+}
+
+.topic-title {
+  padding-bottom: 20px;
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+.blog-sidebar-source {
+  margin-top: 20px;
 }
