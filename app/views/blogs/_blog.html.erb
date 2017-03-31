@@ -8,5 +8,5 @@
     <%= link_to "Delete Blog", blog, method: :delete, data: { confirm: 'Are you sure you want to delete this blog' }  if logged_in?(:site_admin)  %>
   </p>
   <% end %>
-  <p><%= blog.body %></p>
+  <div><%= markdown(blog.body) %></div> 
 </div><!-- /.blog-post -->

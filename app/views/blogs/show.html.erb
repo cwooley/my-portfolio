@@ -4,7 +4,7 @@
   
   <p><%= @blog.topic.title %> </p>
   
-  <p> <%= @blog.body %> </p>
+  <div><%= markdown(@blog.body) %></div> 
   
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
   
