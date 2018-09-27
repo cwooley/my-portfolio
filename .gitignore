@@ -22,3 +22,5 @@
 
 #dont show .env
 /.env
+
+.idea
